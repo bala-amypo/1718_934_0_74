@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Student {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -15,43 +16,53 @@ public class Student {
     private String email;
     private LocalDate dob;
     private float cgpa;
-    
+
+    public Student() {
+    }
+
+    public Student(String name, String email, LocalDate dob, float cgpa) {
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+        this.cgpa = cgpa;
+    }
+
     public long getId() {
         return id;
     }
-    
+
     public void setId(long id) {
         this.id = id;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getEmail() {
         return email;
     }
-    
+
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public LocalDate getDob() {
         return dob;
     }
-    
+
     public void setDob(LocalDate dob) {
         this.dob = dob;
     }
-    
+
     public float getCgpa() {
         return cgpa;
     }
-    
+
     public void setCgpa(float cgpa) {
         this.cgpa = cgpa;
     }
