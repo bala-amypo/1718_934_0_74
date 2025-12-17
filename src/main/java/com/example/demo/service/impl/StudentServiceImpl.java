@@ -11,5 +11,22 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     StudentRepo strepo;
     @Override
-    public Student extends
+    public Student insertStudent(Student st) {
+        return studentRepo.save(st);
+    }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRepo.findAll();
+    }
+
+    @Override
+    public Optional<Student> getOneStudent(Long id) {
+        return studentRepo.findById(id);
+    }
+
+    @Override
+    public void deleteStudent(Long id) {
+        studentRepo.deleteById(id);
+    }
 }
