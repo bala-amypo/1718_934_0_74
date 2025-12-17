@@ -13,7 +13,7 @@ public class Student {
     private long id;
     private String name;
     private String email;
-    private LocalDate doB;
+    private LocalDate dob;
     private float cgpa;
     
     public long getId() {
@@ -40,12 +40,12 @@ public class Student {
         this.email = email;
     }
     
-    public LocalDate getDoB() {
-        return doB;
+    public LocalDate getDob() {
+        return dob;
     }
     
-    public void setDoB(LocalDate doB) {
-        this.doB = doB;
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
     }
     
     public float getCgpa() {
