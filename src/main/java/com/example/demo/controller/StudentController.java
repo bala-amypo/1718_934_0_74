@@ -12,7 +12,7 @@ import com.example.demo.model.Student;
 import com.example.demo.service.SubmitService;
 @CrossOrigin(origins = "")
 @RestController
-public class SubmitController {
+public class StudentController {
     private SubmitService submitService;
     public SubmitController(SubmitService submitService) {
         this.submitService = submitService;
